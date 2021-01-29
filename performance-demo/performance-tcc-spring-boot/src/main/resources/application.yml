@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: performance-tcc-spring-boot
+dtf:
+  env:
+    groups:
+      group-xxxxxxxx:
+    secretId: sid
+    secretKey: skey
+  perf:
+    test:
+      # 测试线程数，-1为核数
+      threadQty: -1
+      # 每个线程测试次数，-1为无限循环
+      timesPerThread: -1
+      # 每次执行间隔，单位ms
+      interval: 0
+logging:
+  file: ./log/${spring.application.name}/root.log
+  level:
+    com.tencent.cloud.dtf: info

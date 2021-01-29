@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: single-transfer-tcc-spring-boot
+  datasource:
+    primary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://127.0.0.1:3306/dtf_demo_account_1?useSSL=false&characterEncoding=utf8&serverTimezone=GMT
+      username:
+      password:
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbcUrl: jdbc:mysql://127.0.0.1:3306/dtf_demo_account_2?useSSL=false&characterEncoding=utf8&serverTimezone=GMT
+      username:
+      password:
+dtf:
+  env:
+    groups:
+      group-xxxxxxxx:
+    secretId: sid
+    secretKey: skey
+logging:
+  level:
+    com.tencent.cloud.dtf: info
